@@ -4,7 +4,7 @@ const restaurantRouter = require("./router/restaurant.router");
 
 
 
-const sql = require("./models/db")
+const sql = require("./models/db.sql")
 const PORT = 4000;
 
 //create service

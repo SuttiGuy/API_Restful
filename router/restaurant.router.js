@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Restaurant = require("../models/restaurant.model");
+const Restaurant = require("../models/restaurant.model.sql");
 
 //Insert rantaurant to database
 //http://localhost:4000/restaurants
