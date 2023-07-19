@@ -23,11 +23,13 @@ const Restaurant = sequelize.define("restaurants",{
     createdAt:{
         type:DataTypes.DATE,
         allowNull:true,
-        DefaultValue:DataTypes.NOW,
+        defaultValueefaultValue:DataTypes.NOW,
     },
     updateAt:{
         type:DataTypes.DATE,
         allowNull:true,
-        DefaultValue:DataTypes.NOW,
+        defaultValue:DataTypes.NOW,
     },
 });
+
+module.exports = Restaurant;
