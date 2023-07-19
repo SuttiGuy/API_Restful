@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Restaurant = require("../controllers/restaurant.controllers");
 
-//ส้ราง restaurants ใหม่
+//สร้าง restaurants ใหม่
 //http://localhost:4000/restaurants
 router.post("/restaurant",async (req,res)=>{
     try{
@@ -14,5 +14,6 @@ router.post("/restaurant",async (req,res)=>{
     }
 });
 
-
+//อัปเดต restaurants ใหม่
+//http://localhost:4000/restaurants
 module.exports = router;
