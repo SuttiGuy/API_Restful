@@ -1,7 +1,7 @@
 const {DataTypes} = require("sequelize");
 const sequelize = require("./db");
 //Defind the restaurants model
-const Restaurant = sequelize.define("restaurant",{
+const Restaurant = sequelize.define("restaurants",{
     id:{
         type: DataTypes.INTEGER,
         primaryKey:true,
@@ -30,5 +30,10 @@ const Restaurant = sequelize.define("restaurant",{
         defaultValue:DataTypes.NOW,
     },
 });
+Restaurant.sync({force:false}).then(()=>{
+    console.log("Table createf or update");
+}).catch((error)=>{
+    console.error("error creating table:", error)
+})
 
 module.exports = Restaurant;

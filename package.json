@@ -4,7 +4,9 @@
   "description": "this project is the resful sql api",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ser.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "restful",
