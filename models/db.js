@@ -3,8 +3,15 @@ const dbConfig = require("../config/db.configs");
 //สร้าง sequalize instance
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     host:dbConfig.HOST,
-    dialect:"mysql"
-})
+    dialect:"mysql",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
+    
+  })
 
 //Test the database 
 async function testConection(){
