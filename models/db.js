@@ -4,12 +4,6 @@ const dbConfig = require("../config/db.configs");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     host:dbConfig.HOST,
     dialect:"mysql",
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
     
   })
 
